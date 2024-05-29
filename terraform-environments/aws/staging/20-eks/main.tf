@@ -59,7 +59,7 @@ module "eks" {
   k8s_subnets    = data.terraform_remote_state.vpc.outputs.k8s_subnets
   public_subnets = data.terraform_remote_state.vpc.outputs.public_subnets
 
-  cluster_version = "1.20"
+  cluster_version = "1.30"
 
   # public cluster - kubernetes API is publicly accessible
   cluster_endpoint_public_access = true
@@ -89,7 +89,7 @@ module "eks" {
 
   node_groups = {
     ng1 = {
-      version          = "1.20"
+      version          = "1.30"
       disk_size        = 10
       desired_capacity = 2
       max_capacity     = 4
