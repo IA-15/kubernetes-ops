@@ -122,7 +122,7 @@ YAML
 # Helm - cert-manager
 #
 module "cert-manager" {
-  source = "github.com/ManagedKube/kubernetes-ops//terraform-modules/aws/helm/helm_generic?ref=v2.0.91"
+  source = "github.com/ManagedKube/kubernetes-ops//terraform-modules/aws/helm/helm_generic?ref=v1.0.9"
 
   # this is the helm repo add URL
   repository = "https://charts.jetstack.io"
@@ -131,7 +131,7 @@ module "cert-manager" {
   # This is what you want to name the chart when deploying
   user_chart_name = "cert-manager"
   # The helm chart version you want to use
-  helm_version = "v1.5.3"
+  helm_version = "v1.3.1"
   # The namespace you want to install the chart into - it will create the namespace if it doesnt exist
   namespace = "cert-manager"
   # The helm chart values file
