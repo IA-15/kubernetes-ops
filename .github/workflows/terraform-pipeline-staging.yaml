@@ -76,6 +76,10 @@ jobs:
     strategy:
       matrix: ${{fromJson(needs.generate_matrix.outputs.matrix)}}
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
     steps:
       - name: Checkout
         uses: actions/checkout@v2
