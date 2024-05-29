@@ -90,8 +90,8 @@ module "eks" {
     ng1 = {
       version          = "1.29"
       disk_size        = 20
-      desired_capacity = 5
-      max_capacity     = 10
+      desired_capacity = 2
+      max_capacity     = 4
       min_capacity     = 1
       instance_types   = ["t3.micro"]
       additional_tags  = local.tags
